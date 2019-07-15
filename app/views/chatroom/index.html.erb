@@ -1,0 +1,50 @@
+<h4 class="ui center aligned medium icon header">
+  <i class="rocketchat icon"></i>
+  Message Me
+</h4>
+
+<div class="ui two column grid">
+  <div class="twelve wide column">
+    <div class="ui fluid raised card chatbox">
+      <div class="content">
+        <div class="ui feed">
+          <% Message.all.each do |message| %>
+            <div class="event">
+              <div class="content">
+                <div class="summary">
+                  <em><%= message.user.username %></em> : <%= message.body %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+      <div class="extra content">
+        <div class="ui fluid icon input">
+          <input type="text" placeholder="Search a very wide input...">
+          <i class="boredered blue paper plane icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="four wide column">
+    <div class="ui card chatbox">
+      <div class="content">
+        <div class="ui inverted vertical menu">
+          <a class="item center aligned">
+            Online Users
+          </a>
+          <a class="item">
+            Mido
+          </a>
+          <a class="item">
+            Mashrur
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
